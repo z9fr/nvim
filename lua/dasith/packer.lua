@@ -26,5 +26,18 @@ return require("packer").startup(function(use)
 
     use("nvim-treesitter/playground")
     use("romgrk/nvim-treesitter-context")
+
+    use("mhartington/formatter.nvim")
+
+    use("nvim-lua/plenary.nvim")
+    use("lukas-reineke/lsp-format.nvim")
+
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+    -- gitgutter 
+    use('lewis6991/gitsigns.nvim')
 end)
 
