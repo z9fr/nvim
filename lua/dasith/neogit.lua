@@ -3,8 +3,6 @@ local nnoremap = require('dasith.keymap').nnoremap
 
 neogit.setup {}
 
-nnoremap("<leader>gs", function()
-    neogit.open({ })
-end);
+nnoremap("<leader>gs", function() neogit.open({}) end);
 
 nnoremap("<leader>ga", "<cmd>!git fetch --all<CR>");
