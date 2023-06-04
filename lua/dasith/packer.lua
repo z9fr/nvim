@@ -28,6 +28,11 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
 
     use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
