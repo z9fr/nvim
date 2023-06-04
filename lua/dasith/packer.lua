@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
+    -- gitgutter
+    use('lewis6991/gitsigns.nvim')
 
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
