@@ -2,8 +2,6 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-
-
 lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
@@ -13,7 +11,8 @@ lsp.ensure_installed({
     'cssls',
     'phpactor',
     'hls',
-    'ocamllsp'
+    'ocamllsp',
+    'zls'
 })
 
 lsp.nvim_workspace()
@@ -36,6 +35,7 @@ lsp.format_on_save({
     servers = {
         ['lua_ls'] = { 'lua' },
         ['rust_analyzer'] = { 'rust' },
+        ['zls'] = { 'zig' },
         ['prettierd'] = { 'css', 'typescript', 'javascript', 'javascriptreact' }
         -- if you have a working setup with null-ls
         -- you can specify filetypes it can format.
