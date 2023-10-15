@@ -27,6 +27,12 @@ return require('packer').startup(function(use)
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
 
+    -- flutter
+    use('dart-lang/dart-vim-plugin')
+    use('thosakwe/vim-flutter')
+    use('natebosch/vim-lsc')
+    use('natebosch/vim-lsc-dart')
+
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end

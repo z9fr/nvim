@@ -23,6 +23,7 @@ lspconfig.tsserver.setup({
     end
 })
 
+
 lspconfig.gopls.setup {
     cmd = { "gopls", "serve" },
     filetypes = { "go", "gomod" },

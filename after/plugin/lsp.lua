@@ -12,7 +12,8 @@ lsp.ensure_installed({
     'phpactor',
     'hls',
     'ocamllsp',
-    'zls'
+    'zls',
+    'helm_ls',
 })
 
 lsp.nvim_workspace()
@@ -33,10 +34,11 @@ lsp.format_on_save({
         timeout_ms = 10000,
     },
     servers = {
-        ['lua_ls'] = { 'lua' },
+        ['lua_ls']        = { 'lua' },
         ['rust_analyzer'] = { 'rust' },
-        ['zls'] = { 'zig' },
-        ['prettierd'] = { 'css', 'typescript', 'javascript', 'javascriptreact' }
+        ['zls']           = { 'zig' },
+        ['helm_ls']       = { 'helm', 'tpl' },
+        ['prettierd']     = { 'css', 'typescript', 'javascript', 'javascriptreact' },
         -- if you have a working setup with null-ls
         -- you can specify filetypes it can format.
         -- ['null-ls'] = {'javascript', 'typescript'},
