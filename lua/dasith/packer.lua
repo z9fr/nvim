@@ -38,6 +38,12 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'nvim-orgmode/orgmode', config = function()
+        require('orgmode').setup {}
+    end
+    }
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
