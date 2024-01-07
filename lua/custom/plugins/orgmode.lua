@@ -7,24 +7,24 @@ return {
 		config = function()
 			require('orgmode').setup_ts_grammar()
 			require('orgmode').setup({
-				org_agenda_files = '~/Documents/test/**/*',
-				org_default_notes_file = '~/Documents/test/refile.org',
+				org_agenda_files = '~/sync/org/**/*',
+				org_default_notes_file = '~/sync/org/refile.org',
 				org_agenda_span = 'week',
 				org_capture_templates = {
 					T = {
 						description = 'Todo',
 						template = '* TODO %?\n %u',
-						target = '~/Documents/test/todo.org'
+						target = '~/sync/org/todo.org'
 					},
 					j = {
 						description = 'Journal',
 						template = '\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?',
-						target = '~/Documents/test/journal.org'
+						target = '~/sync/org/journal.org'
 					},
 					n = {
 						description = 'Notes',
 						template = '* %?\n %u',
-						target = '~/Documents/test/notes.org'
+						target = '~/sync/org/notes.org'
 					}
 				}
 			})
