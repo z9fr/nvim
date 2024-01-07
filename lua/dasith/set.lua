@@ -12,6 +12,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 
@@ -60,7 +63,7 @@ vim.wo.signcolumn = 'yes'
 vim.o.completeopt = 'menuone,noselect'
 
 
-vim.o.showtabline  = 1
+vim.o.showtabline = 1
 
 -- [[ Basic Keymaps ]]
 
