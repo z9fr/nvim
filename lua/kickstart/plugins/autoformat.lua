@@ -44,6 +44,17 @@ return {
           return
         end
 
+        -- Tsserver usually works poorly. Sorry you work with bad languages
+        -- You can remove this line if you know what you're doing :)
+        -- if client.name == 'tsserver' then
+        --   return
+        -- end
+
+        if client.name == 'tsserver' then
+          vim.cmd([[ autocmd BufWritePre <buffer> :Prettier ]])
+          return
+        end
+
         vim.api.nvim_create_autocmd('BufWritePre', {
           group = get_augroup(client),
           buffer = bufnr,

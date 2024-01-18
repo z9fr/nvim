@@ -29,6 +29,12 @@ require('lazy').setup({
   },
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim',  opts = {} },
+  {
+    'prettier/vim-prettier',
+    opts = {},
+    config = function()
+    end
+  },
 
   require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.debug',
@@ -95,6 +101,7 @@ local servers = {
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
+  terraformls = {},
 
   lua_ls = {
     Lua = {
