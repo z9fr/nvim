@@ -35,6 +35,12 @@ require('lazy').setup({
     config = function()
     end
   },
+  {
+    'tpope/vim-fugitive',
+  },
+  {
+    'tpope/vim-rhubarb',
+  },
 
   require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.debug',
@@ -102,6 +108,8 @@ local servers = {
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   terraformls = {},
+  templ = {},
+  htmx = {},
 
   lua_ls = {
     Lua = {

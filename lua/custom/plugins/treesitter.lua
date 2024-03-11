@@ -7,11 +7,16 @@ return {
 		},
 		build = ':TSUpdate',
 		config = function()
+			vim.filetype.add({
+				extension = {
+					templ = "templ",
+				},
+			})
 			vim.defer_fn(function()
 				require('nvim-treesitter.configs').setup {
 					-- Add languages to be installed here that you want installed for treesitter
 					ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript',
-						'vimdoc', 'vim', 'query', 'bash', 'hcl', 'terraform' },
+						'vimdoc', 'vim', 'query', 'bash', 'hcl', 'terraform', 'templ' },
 
 					auto_install = true,
 
